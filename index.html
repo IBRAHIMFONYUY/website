@@ -1,830 +1,692 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta content="Ibrahim Fonyuy" name="Developer">
-  <meta content="Tech, Bambili" name="keywords">
-
-
-  <link href="ao.css" rel="stylesheet">
-  <link href="bootstrap.min.css" rel="stylesheet">
-  <link href="bootstrap-icons.css" rel="stylesheet">
-  <link href="boxicons.min.css" rel="stylesheet">
-  <link href="glightbox.min.css" rel="stylesheet">
-  <link href="swiper-bundle.min.css" rel="stylesheet">
-  <link href="styles.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-  <link rel="stylesheet" href="animate.css">
-  <link rel="stylesheet" href="stylein.css">
-  <link rel="stylesheet" href="slick.css">
-
-  <!-- CSS
-  ================================================== -->
-
-  <link rel="stylesheet" href="plugins/themefisher-font/style.css">
-  <!-- bootstrap.min css -->
-  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
-  <!-- Lightbox.min css -->
-  <link rel="stylesheet" href="plugins/lightbox2/css/lightbox.min.css">
-  <!-- animation css -->
-  <link rel="stylesheet" href="plugins/animate/animate.css">
-  <!-- Slick Carousel -->
-  <link rel="stylesheet" href="plugins/slick/slick.css">
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
-
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-  <link rel="shortcut icon" href="p2.png" type="image/x-icon">
-  <title>IBRAHIM FONYUY</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ibrahim Fonyuy - Software Developer specializing in Django, React, and Python. Building scalable web applications and digital solutions.">
+    <meta name="keywords" content="software developer Cameroon, Django developer, React developer, Python developer, web development, full-stack developer, RahimStudios">
+    <meta name="author" content="Ibrahim Fonyuy">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Ibrahim Fonyuy | Software Developer (Django, React, Python)">
+    <meta property="og:description" content="Passionate software developer building scalable web applications with Django, React, and Python.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ibrahimfonyuy.com">
+    <meta property="og:image" content="https://ibrahimfonyuy.com/images/og-image.jpg">
+    <meta property="og:site_name" content="IBRAHIMFONYUY">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ibrahim Fonyuy | Software Developer">
+    <meta name="twitter:description" content="Building scalable web applications with Django, React, and Python">
+    <meta name="twitter:image" content="https://ibrahimfonyuy.com/images/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="p2.png">
+    <link rel="apple-touch-icon" href="p2.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="aos.css">
+    <link rel="stylesheet" href="glightbox.min.css">
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Ibrahim Fonyuy | Software Developer (Django, React, Python) | IBRAHIMFONYUY</title>
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ibrahim Fonyuy",
+        "jobTitle": "Software Developer",
+        "description": "Software Developer specializing in Django, React, and Python",
+        "url": "https://ibrahimfonyuy.com",
+        "sameAs": [
+            "https://github.com/IBRAHIMFONYUY",
+            "https://linkedin.com/in/ibrahim-fonyuy-71754436b",
+            "https://facebook.com/fonyuyibrahim"
+        ],
+        "knowsAbout": ["Django", "React", "Python", "Web Development", "Full-Stack Development"],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bambili",
+            "addressRegion": "Northwest",
+            "addressCountry": "Cameroon"
+        }
+    }
+    </script>
 </head>
 
-<body id="body">
-
-  <!--
-  Start Preloader
-  ==================================== -->
-  <div id="preloader">
-    <div class='preloader'>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-
-    </div>
-  </div>
-
-  <span class="bi-list mobile-nav-toggle d-xl-none"
-    style="background-color: var(--background-color); justify-content:center; height:1px; width:1px; margin:5px">
-    <div class="ham"
-      style="padding: 5px; margin-right:  30px; height:30px; place-content:center; background-color: var(--background-color); ">
-      &#9776;</div>
-  </span>
-  <header id="header"
-    style="background-color: var(--background-color);  padding:1px; justify-content:center; border-right:solid blue 3px;">
-    <div class="d-flex flex-column">
-      <div class="profile">
-        <img src="p4.jpg" alt="" class="img-fluid rounded-circle" style="border: solid 5px blue;">
-        <h1 style="color: white;">
-          IBRAHIM FONYUY✨
-        </h1>
-      </div>
-
-      <!-- <div class="social-icon" style="display:flex; flex-wrap: wrap; margin:0; padding: 0;" data-aos="fade-up" >
-                  <ul style=" margin:2px; justify-content:center; display:flex" >
-                    <li><a href="https://facebook.com/fonyuyibrahim"><i  class="tf-ion-social-facebook" style="width: 5px; height:9px" ></i></a></li>
-                    <li><a href="https://wa.me/237677020718"><i class="tf-ion-social-whatsapp"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/ibrahim-fonyuy-4798482bb"><i class="tf-ion-social-linkedin-outline"></i></a></li>
-                  </ul>
-                  <hr>
-                </div> -->
-      <style>
-        .ham:hover {
-          background-color: #167da9;
-        }
-
-        @media (max-length:850px) {
-          #header {
-            left: -300px;
-          }
-
-          .social-icon ul {
-            padding: 1px;
-          }
-        }
-
-
-        .clearfix.nav i {
-          height: 40px;
-          width: 50px;
-          border: solid white 1px;
-          place-content: center;
-          text-align: center;
-          justify-content: center;
-          border-radius: 5px;
-          margin: 2px;
-          color: rgb(92, 188, 226);
-        }
-
-
-
-        .clearfix.nav i:hover {
-          background-color: rgb(36, 171, 224);
-          border-radius: 100%;
-          color: white;
-          transition: ease-in 0.3s;
-        }
-
-        #navbar a {
-          align-items: center;
-          text-align: left;
-          display: block;
-
-        }
-      </style>
-      <div class="mask">
-        <ul class="clearfix nav" style="display: flex;">
-          <li><a href="https://www.facebook.com/fonyuyibrahim"><i class="tf-ion-social-facebook"></i></a></li>
-          <li><a href="https://wa.me/237677020718"><i class="tf-ion-social-whatsapp"></i></a></li>
-          <li><a href="https://github.com/IBRAHIMFONYUY">
-
-              <i class="tf-ion-social-github-outline"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/ibrahim-fonyuy-71754436b/"><i
-                class="tf-ion-social-linkedin-outline"></i></a></li>
-        </ul>
-      </div>
-
-
-      <nav id="navbar" class="nav-menu navbar overflow-auto" >
-
-
-        <ul>
-          <li>
-          <li><a href="#home" class="nav-link scrollto active"><span><i class="tf-ion-android-home"></i> Home</span></a>
-          </li>
-          <li><a href="#about" class="nav-link scrollto"><span><i class="tf-ion-android-person"></i> About</span></a>
-          </li>
-          <li><a href="#skills" class="nav-link scrollto"><span><i class="tf-ion-ribbon-a"></i>Skills</span></a></li>
-          <li><a href="#services" class="nav-link scrollto"><span><i
-                  class="tf-ion-android-laptop"></i>Services</span></a></li>
-
-          <li><a href="#portfolio" class="nav-link scrollto"><span><i
-                  class="tf-ion-paper-airplane"></i>Portfolio</span></a></li>
-
-          <li><a href="#contact" class="nav-link scrollto"><span><i class="tf-ion-android-call"></i>Contact</span></a>
-          </li>
-          </li>
-
-        </ul>
-      </nav>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-text">IBRAHIM FONYUY</div>
+        </div>
     </div>
 
-  </header>
-
-
-  <main id="main">
-
-    <div class="hero-slider" id="home" data-aos="fade-in" style="width: 100%;">
-      <div class="slider-item th-fullpage hero-area" style="background-image: url(p1.jpg);">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">I craft digital <br> experience
-              </h1>
-              <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">I create innovative digital
-                designs,
-                using recent technologies <br>
-              </p>
-              <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main"
-                href="#about">Explore</a>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h3>IBRAHIM FONYUY</h3>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="slider-item th-fullpage hero-area" style="background-image: url(p2.png);">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <h1 data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">I Combine Design and <br>
-                Creativity</h1>
-              <p data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".5">I Create just what you need
-                for your Perfect desires
-              </p>
-              <a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8" class="btn btn-main"
-                href="#services">Explore</a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ======= About Section ======= -->
-
-    <section id="about" class="about" style="font-family:Georgia, 'Times New Roman', Times, serif; ">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>About</h2>
-
-        </div>
-        <section class="single-page-header">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12" data-aos="fade-up">
-                <h2>About me</h2>
-                <ol class="breadcrumb header-bradcrumb justify-content-center">
-                  <li class="breadcrumb-item"><a href="#home" class="text-white">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">About</li>
-                </ol>
-              </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-          </div>
-        </section>
-
-        <div class="row" style="padding: 2%;">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="image2.png" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left" style="font-size: 20px;">
-            <h3>INFO</h3>
-            <p>
-            <h2><b>Software Engineer</b></h2><br>
-            I'm a Software Engineer who is has a great passion for IT and its enormous potentials to solve real life
-            problems. I am currently pursuing a bachelors degree in software engineering relying mainly on God almighty.
-            I am an innovative developer craving for opportunities to showcase my talents and make myself influential in
-            the best of manners. <br>
-            In addition, I also do tutoring in web Development for both Frontend and Backend and I am also an expert in
-            Microsoft Office. Don't hesitate to contact for any related Services😉
-
-            </p>
-            <p>
-            <h2><b>My Mission</b></h2><br>
-            My Mission is to strive for the establishment of next higher tech future of softwares that will facilitate
-            lives, comunications and sutainable development.
-
-            </p>
-            <p>
-            <h2><b>My Vision</b></h2><br>
-            My Vision is to empower the world's digital future to its peak through the developent of innovative,
-            responsive and accesible technological solutions.
-
-            </p>
-            <p>
-
-
-            </p>
-          </div>
         </div>
+    </nav>
 
-      </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text" data-aos="fade-up" data-aos-delay="100">
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="highlight">Ibrahim Fonyuy</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        <span class="typing-text">Software Developer</span>
+                    </h2>
+                    <p class="hero-description">
+                        A passionate <strong>Software Developer</strong> building scalable web applications with <strong>Django, React, and Python</strong>. 
+                        I create solutions that solve real-world problems and empower people through technology.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#portfolio" class="btn btn-primary">
+                            <i class="fas fa-briefcase"></i> View Projects
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fas fa-envelope"></i> Hire Me
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
+                    <div class="image-container">
+                        <img src="image.png" alt="Ibrahim Fonyuy" class="hero-img">
+                        <div class="floating-elements">
+                            <div class="floating-card django">
+                                <i class="fab fa-python"></i>
+                                <span>Django</span>
+                            </div>
+                            <div class="floating-card react">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="floating-card python">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-
-    <section class="counter-wrapper section-sm" data-aos="fade-up">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-xl-6 col-lg-8 text-center">
-            <div class="title">
-              <h2>FeedBacks</h2>
-
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know me better</p>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <!-- first count item -->
-          <div class="col-md-3 col-sm-6 col-xs-6 text-center " data-aos="fade-left">
-            <div class="counters-item">
-              <i class="tf-ion-ios-person-outline"></i>
-              <div>
-                <span class="counter" data-count="10">0</span>
-              </div>
-              <h3>Happy Clients</h3>
-            </div>
-          </div>
-          <!-- end first count item -->
-
-          <!-- second count item -->
-          <div class="col-md-3 col-sm-6 col-xs-6 text-center " data-aos="fade-up">
-            <div class="counters-item">
-              <i class="tf-ion-android-done-all"></i>
-              <div>
-                <span class="counter" data-count="10">0</span>
-              </div>
-              <h3>Projects completed</h3>
-            </div>
-          </div>
-          <!-- end second count item -->
-
-          <!-- third count item -->
-          <div class="col-md-3 col-sm-6 col-xs-6 text-center " data-aos="fade-up">
-            <div class="counters-item">
-              <i class="tf-ion-ios-compose-outline"></i>
-              <div>
-                <span class="counter" data-count="52">0</span>
-              </div>
-              <h3>Positive feedback</h3>
-
-            </div>
-          </div>
-          <!-- end third count item -->
-
-          <!-- fourth count item -->
-          <div class="col-md-3 col-sm-6 col-xs-6 text-center " data-aos="fade-right">
-            <div class="counters-item kill-border">
-              <i class="tf-ion-ios-heart-outline"></i>
-              <div>
-                <span class="counter" data-count="120">0</span>
-              </div>
-              <h3>Encouragements</h3>
-            </div>
-          </div>
-          <!-- end fourth count item -->
-        </div> <!-- end row -->
-      </div> <!-- end container -->
-    </section> <!-- end section -->
-    <!--
-            Start Call To Action
-            ==================================== -->
-
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg" data-aos="fade-up">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Skills</h2>
-          <p>My Overall</p>
-        </div>
-
-        <div class="row skills-content">
-
-          <div class="col-lg-6" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">Django <i class="val">90%</i></span>
-              <div class="progress-bar-wrap" id="bar">
-                <div class="progress-bar" id="bar1" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                  aria-valuemax="100"></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill" id="progress">HTML <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">CSS <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">JavaScript <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">C++ & C<i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up">
-
-
-
-            <div class="progress">
-              <span class="skill">Python <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">React & React Native<i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up">
-            <div class="progress">
-              <span class="skill">Cordova <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up">
-
-
-
-          </div>
-    </section><!-- End Skills Section -->
-
-    <section id="services" class="services" data-aos="fade-up">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Services</h2>
-
-        </div>
-        <section class="single-page-header" data-aos="fade-up">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <h2>What I Offer</h2>
-                <ol class="breadcrumb header-bradcrumb justify-content-center">
-                  <li class="breadcrumb-item"><a href="#home" class="text-white">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Services</li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="service-2 section">
-          <div class="container">
-            <div class="row justify-content-center">
-
-              <div class="col-lg-6">
-                <!-- section title -->
-
-                <div class="border"></div>
-              </div>
-              <!-- /section title -->
-            </div>
-          </div>
-          <div class="row" style="justify-content: center;">
-            <div class="col-md-8" style="justify-content: center;">
-              <div class="row text-center">
-                <div class="col-md-6 col-sm-6" data-aos="fade-right">
-                  <div class="service-item">
-                    <i class="tf-ion-android-desktop"></i>
-                    <h4>Full Stack Development</h4>
-                    <p>Developing full functional web applications using the latest and more efficient softwares for
-                      seamless performance and scalability</p>
-                  </div>
-                </div><!-- END COL -->
-                <div class="col-md-6 col-sm-6" data-aos="fade-left">
-                  <div class="service-item">
-                    <i class="tf-ion-ios-box-outline"></i>
-                    <h4>Mobile App Development</h4>
-                    <p>I emphasize on efficiency and code reusability to build performant working mobile apps</p>
-                  </div>
-                </div><!-- END COL -->
-                <div class="col-md-6 col-sm-6" data-aos="fade-right">
-                  <div class="service-item">
-                    <i class="tf-ion-android-laptop"></i>
-                    <h4>Tutoring</h4>
-                    <p>I offer Tutorng and Mentorship on related Tech fields</p>
-                  </div>
-                </div><!-- END COL -->
-                <div class="col-md-6 col-sm-6" data-aos="fade-left">
-                  <div class="service-item">
-                    <i class="tf-ion-ios-bolt-outline"></i>
-                    <h4>MS Epert</h4>
-                    <p>Providing IT solutions and support on MICROSOFT OFFICE.</p>
-                  </div>
-                </div><!-- END COL -->
-              </div>
-            </div>
-          </div> <!-- End row -->
-      </div> <!-- End container -->
-    </section> <!-- End section -->
-
-    </section><!-- End Services Section -->
-
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg" data-aos="fade-up">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Portfolio</h2>
-        </div>
-
-        <section class="single-page-header">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12" data-aos="fade-up">
-                <h2>My Works</h2>
-                <ol class="breadcrumb header-bradcrumb justify-content-center">
-                  <li class="breadcrumb-item"><a href="#home" class="text-white">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Portfolio</li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div class="row" style="justify-content: center; margin-top: 40px;">
-          <!-- Portfolio Item 1 -->
-          <div class="col-lg-4 col-md-6 portfolio-item" data-aos="zoom-in" data-aos-delay="100" onclick="">
-            <div class="card shadow-sm border-0 mb-4" style="border-radius: 16px; overflow: hidden;">
-              <div class="portfolio-img position-relative">
-                <img src="images/p1.png" class="img-fluid" alt="Project 1" style="transition: transform 0.4s;">
-                <div class="portfolio-info d-flex flex-column justify-content-center align-items-center"
-                  style="position: absolute; top:0; left:0; width:100%; height:100%; background:rgba(22,125,169,0.85); opacity:0; transition: opacity 0.4s;">
-                  <h4 class="text-white mb-2 animate__animated animate__fadeInDown">E-Commerce Website</h4>
-                  <p class="text-white mb-3 animate__animated animate__fadeInUp">A modern online shop built with Django & React.</p>
-                  <a href="https://yourprojectlink.com" class="btn btn-light animate__animated animate__fadeInUp" target="_blank" rel="noopener">View Project</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Portfolio Item 2 -->
-          <div class="col-lg-4 col-md-6 portfolio-item" data-aos="zoom-in" data-aos-delay="200">
-            <div class="card shadow-sm border-0 mb-4" style="border-radius: 16px; overflow: hidden;">
-              <div class="portfolio-img position-relative">
-                <img src="images/p2.png" class="img-fluid" alt="Project 2" style="transition: transform 0.4s;">
-                <div class="portfolio-info d-flex flex-column justify-content-center align-items-center"
-                  style="position: absolute; top:0; left:0; width:100%; height:100%; background:rgba(22,125,169,0.85); opacity:0; transition: opacity 0.4s;">
-                  <h4 class="text-white mb-2 animate__animated animate__fadeInDown">Mobile Banking App</h4>
-                  <p class="text-white mb-3 animate__animated animate__fadeInUp">Cross-platform app for secure transactions.</p>
-                  <a href="https://yourprojectlink.com" class="btn btn-light animate__animated animate__fadeInUp" target="_blank" rel="noopener">View Project</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Portfolio Item 3 -->
-          <div class="col-lg-4 col-md-6 portfolio-item" data-aos="zoom-in" data-aos-delay="300">
-            <div class="card shadow-sm border-0 mb-4" style="border-radius: 16px; overflow: hidden;">
-              <div class="portfolio-img position-relative">
-                <img src="images/p3.png" class="img-fluid" alt="Project 3" style="transition: transform 0.4s;">
-                <div class="portfolio-info d-flex flex-column justify-content-center align-items-center"
-                  style="position: absolute; top:0; left:0; width:100%; height:100%; background:rgba(22,125,169,0.85); opacity:0; transition: opacity 0.4s;">
-                  <h4 class="text-white mb-2 animate__animated animate__fadeInDown">Portfolio Website</h4>
-                  <p class="text-white mb-3 animate__animated animate__fadeInUp">Personal portfolio with interactive UI.</p>
-                  <a href="https://yourprojectlink.com" class="btn btn-light animate__animated animate__fadeInUp" target="_blank" rel="noopener">View Project</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item" data-aos="zoom-in" data-aos-delay="300">
-            <div class="card shadow-sm border-0 mb-4" style="border-radius: 16px; overflow: hidden;">
-              <div class="portfolio-img position-relative">
-                <img src="images/p4.png" class="img-fluid" alt="Project 3" style="transition: transform 0.4s;">
-                <div class="portfolio-info d-flex flex-column justify-content-center align-items-center"
-                  style="position: absolute; top:0; left:0; width:100%; height:100%; background:rgba(22,125,169,0.85); opacity:0; transition: opacity 0.4s;">
-                  <h4 class="text-white mb-2 animate__animated animate__fadeInDown">Portfolio Website</h4>
-                  <p class="text-white mb-3 animate__animated animate__fadeInUp">Personal portfolio with interactive UI.</p>
-                  <a href="https://yourprojectlink.com" class="btn btn-light animate__animated animate__fadeInUp" target="_blank" rel="noopener">View Project</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item" data-aos="zoom-in" data-aos-delay="300">
-            <div class="card shadow-sm border-0 mb-4" style="border-radius: 16px; overflow: hidden;">
-              <div class="portfolio-img position-relative">
-                <img src="images/p5.png" class="img-fluid" alt="Project 3" style="transition: transform 0.4s;">
-                <div class="portfolio-info d-flex flex-column justify-content-center align-items-center"
-                  style="position: absolute; top:0; left:0; width:100%; height:100%; background:rgba(22,125,169,0.85); opacity:0; transition: opacity 0.4s;">
-                  <h4 class="text-white mb-2 animate__animated animate__fadeInDown">Portfolio Website</h4>
-                  <p class="text-white mb-3 animate__animated animate__fadeInUp">Personal portfolio with interactive UI.</p>
-                  <a href="https://yourprojectlink.com" class="btn btn-light animate__animated animate__fadeInUp" target="_blank" rel="noopener">View Project</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item" data-aos="zoom-in" data-aos-delay="300">
-            <div class="card shadow-sm border-0 mb-4" style="border-radius: 16px; overflow: hidden;">
-              <div class="portfolio-img position-relative">
-                <img src="images/p6.png" class="img-fluid" alt="Project 3" style="transition: transform 0.4s;">
-                <div class="portfolio-info d-flex flex-column justify-content-center align-items-center"
-                  style="position: absolute; top:0; left:0; width:100%; height:100%; background:rgba(22,125,169,0.85); opacity:0; transition: opacity 0.4s;">
-                  <h4 class="text-white mb-2 animate__animated animate__fadeInDown">Portfolio Website</h4>
-                  <p class="text-white mb-3 animate__animated animate__fadeInUp">Personal portfolio with interactive UI.</p>
-                  <a href="https://yourprojectlink.com" class="btn btn-light animate__animated animate__fadeInUp" target="_blank" rel="noopener">View Project</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          
-
-        </div>
-
-        <style>
-          .portfolio-img:hover img {
-            transform: scale(1.08);
-            filter: blur(2px) brightness(0.7);
-          }
-          .portfolio-img:hover .portfolio-info {
-            opacity: 1;
-          }
-          .portfolio-info {
-            opacity: 0;
-          }
-          .portfolio-img {
-            cursor: pointer;
-            overflow: hidden;
-          }
-        </style>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
-
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact" data-aos="fade-up">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-
-        </div>
-
-        <section class="single-page-header" data-aos="fade-up">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <h2>Contact Me</h2>
-                <ol class="breadcrumb header-bradcrumb justify-content-center">
-                  <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Contact</li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!--Start Contact Us
-                  =========================================== -->
-        <section class="contact-us" id="contact">
-          <div class="container">
-            <div class="row justify-content-center">
-              <!-- section title -->
-              <div class="col-xl-6 col-lg-8">
-                <div class="title text-center">
-                  <h2>Get In Touch</h2>
-
-                  <div class="border"></div>
-                </div>
-              </div>
-              <!-- /section title -->
-            </div>
-
-            <section class="team" id="team" data-aos="fade-up">
-
-
-
-              <!-- team member -->
-
-              <div class="row">
-                <!-- Contact Details -->
-                <div class="contact-details col-md-6 ">
-                  <div class="col-lg-9 col-md-10">
-                    <div class="team-member text-center">
-                      <div class="member-photo">
-                        <!-- member photo -->
-                        <img loading="lazy" class="img-fluid" src="image.png" alt="ibrahm fonyuy">
-                        <!-- /member photo -->
-
-                        <!-- member social profile -->
-
-                        <div class="mask">
-                          <ul class="clearfix">
-                            <li><a href="https://www.facebook.com/fonyuyibrahim"><i
-                                  class="tf-ion-social-facebook"></i></a></li>
-                            <li><a href="https://wa.me/237677020718"><i class="tf-ion-social-whatsapp"></i></a></li>
-                            <li><a
-                                href="https://www.google.com/search?q=ibrahim+fonyuy&rlz=1CAVNCX_enCM1116&oq=ibrahim+fonyuyu&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDU3NjhqMGo3qAIIsAIB&sourceid=chrome&ie=UTF-8"><i
-                                  class="tf-ion-social-google-outline"></i></a></li>
-                            <li><a href="https://www.linkedin.com/in/ibrahim-fonyuy-4798482bb"><i
-                                  class="tf-ion-social-linkedin-outline"></i></a></li>
-                          </ul>
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h3>Building Digital Solutions That Matter</h3>
+                    <p>
+                        I'm a software developer from Cameroon with a strong passion for building impactful digital solutions. 
+                        I specialize in backend and full-stack development, focusing on clean architecture, performance, and scalability.
+                    </p>
+                    <p>
+                        My goal is to use technology to create meaningful change and inspire the next generation of developers. 
+                        I believe in writing clean, maintainable code and building applications that solve real problems.
+                    </p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h4>2+ Years</h4>
+                            <p>Experience</p>
                         </div>
-                        <!-- /member social profile -->
-                      </div>
-
-                      <!-- member name & designation -->
-                      <div class="member-content">
-                        <h3>IBRAHIM FONYUY✨</h3>
-
-                      </div>
-                      <!-- /member name & designation -->
-
+                        <div class="stat-item">
+                            <h4>10+ Projects</h4>
+                            <p>Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>5+ Technologies</h4>
+                            <p>Mastered</p>
+                        </div>
                     </div>
-
-                  </div>
-                  </ul>
-                  <!-- Footer Social Links -->
-                  <ul class="contact-short-info mt-4" data-aos="fade-up">
-                    <li class="mb-3">
-                      <i class="tf-ion-ios-home"></i>
-                      <span>Coners-Upquaters, Bambili, NorthWest Region, Cameroon</span>
-                    </li>
-                    <li class="mb-3">
-                      <i class="tf-ion-android-phone-portrait"></i>
-                      <span>Phone: +237 677 020 718</span>
-                    </li>
-                    <li>
-                      <i class="tf-ion-android-mail"></i>
-                      <span>Email: ibrahimfonyuy06@gmail.com</span>
-                    </li>
-                  </ul>
-                  <!--/. End Footer Social Links -->
                 </div>
-
-                <div class="contact-form col-md-6 ">
-                  <form id="contact-form" method="post" role="form">
-                    <div class="form-group mb-4">
-                      <input type="text" placeholder="Your Name" class="form-control" name="name" id="name" required>
+                
+                <div class="about-image" data-aos="fade-left">
+                    <div class="image-frame">
+                        <img src="image2.png" alt="Ibrahim Fonyuy">
+                        <div class="frame-decoration"></div>
                     </div>
-
-                    <div class="form-group mb-4">
-                      <input type="email" placeholder="Your Email" class="form-control" name="email" id="email"
-                        required>
-                    </div>
-
-                    <div class="form-group mb-4">
-                      <input type="text" placeholder="Subject" class="form-control" name="subject" id="subject"
-                        required>
-                    </div>
-
-                    <div class="form-group mb-4">
-                      <textarea rows="6" placeholder="Message" class="form-control" name="message" id="message"
-                        required></textarea>
-                    </div>
-                    <div id="cf-submit">
-                      <input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit">
-                    </div>
-
-                  </form>
                 </div>
-            </section>
-            <!-- / End Contact Details -->
+            </div>
+        </div>
+    </section>
 
-            <!-- Contact Form -->
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Technologies I work with</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Django</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Python</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Node.js</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>React</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>JavaScript</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>HTML/CSS</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <h3><i class="fas fa-tools"></i> Tools & Others</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Git</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>React Native</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>C++</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <!-- ./End Contact Form -->
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Services</h2>
+                <p class="section-subtitle">What I can do for you</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Web Application Development</h3>
+                    <p>Full-stack apps using Django, React, and modern tools. From concept to deployment, I build scalable web applications that solve real business problems.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Custom Web Apps</li>
+                        <li><i class="fas fa-check"></i> API Development</li>
+                        <li><i class="fas fa-check"></i> Database Design</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile App Development</h3>
+                    <p>Cross-platform mobile applications using React Native. I create performant, user-friendly mobile apps that work seamlessly on both iOS and Android.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> React Native Apps</li>
+                        <li><i class="fas fa-check"></i> UI/UX Design</li>
+                        <li><i class="fas fa-check"></i> App Store Deployment</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Backend Development</h3>
+                    <p>Secure, scalable APIs and database design using Django and Python. I build robust backend systems that power modern applications.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> REST APIs</li>
+                        <li><i class="fas fa-check"></i> Database Architecture</li>
+                        <li><i class="fas fa-check"></i> System Integration</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Frontend Development</h3>
+                    <p>Responsive, user-friendly interfaces with React and modern CSS. I create beautiful, performant frontend experiences that users love.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> React Components</li>
+                        <li><i class="fas fa-check"></i> Responsive Design</li>
+                        <li><i class="fas fa-check"></i> Performance Optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-          </div> <!-- end row -->
-      </div> <!-- end container -->
-    </section> <!-- end section -->
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Portfolio</h2>
+                <p class="section-subtitle">Recent projects I've worked on</p>
+            </div>
+            
+            <div class="portfolio-filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-image">
+                        <img src="images/p1.png" alt="E-Commerce Platform">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>E-Commerce Platform</h3>
+                                <p>A modern online shopping platform with payment integration and inventory management.</p>
+                                <div class="portfolio-tech">
+                                    <span>Django</span>
+                                    <span>React</span>
+                                    <span>PostgreSQL</span>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="https://github.com/IBRAHIMFONYUY" class="btn btn-sm" target="_blank">
+                                        <i class="fab fa-github"></i> Code
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-primary">
+                                        <i class="fas fa-external-link-alt"></i> Live Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="mobile" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-image">
+                        <img src="images/p2.png" alt="Mobile Banking App">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Mobile Banking App</h3>
+                                <p>Secure cross-platform banking application with biometric authentication.</p>
+                                <div class="portfolio-tech">
+                                    <span>React Native</span>
+                                    <span>Node.js</span>
+                                    <span>MongoDB</span>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="https://github.com/IBRAHIMFONYUY" class="btn btn-sm" target="_blank">
+                                        <i class="fab fa-github"></i> Code
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-primary">
+                                        <i class="fas fa-external-link-alt"></i> Live Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-image">
+                        <img src="images/p3.png" alt="Task Management System">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Task Management System</h3>
+                                <p>Collaborative project management tool with real-time updates and team features.</p>
+                                <div class="portfolio-tech">
+                                    <span>Django</span>
+                                    <span>JavaScript</span>
+                                    <span>WebSocket</span>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="https://github.com/IBRAHIMFONYUY" class="btn btn-sm" target="_blank">
+                                        <i class="fab fa-github"></i> Code
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-primary">
+                                        <i class="fas fa-external-link-alt"></i> Live Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="design" data-aos="fade-up" data-aos-delay="400">
+                    <div class="portfolio-image">
+                        <img src="images/p4.png" alt="Portfolio Website">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>Portfolio Website</h3>
+                                <p>Modern, responsive portfolio with smooth animations and optimized performance.</p>
+                                <div class="portfolio-tech">
+                                    <span>React</span>
+                                    <span>Tailwind CSS</span>
+                                    <span>Framer Motion</span>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="https://github.com/IBRAHIMFONYUY" class="btn btn-sm" target="_blank">
+                                        <i class="fab fa-github"></i> Code
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-primary">
+                                        <i class="fas fa-external-link-alt"></i> Live Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Testimonials</h2>
+                <p class="section-subtitle">What clients say about me</p>
+            </div>
+            
+            <div class="testimonials-slider" data-aos="fade-up">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Ibrahim delivered an exceptional e-commerce platform that exceeded our expectations. His attention to detail and problem-solving skills are outstanding."</p>
+                        <div class="testimonial-author">
+                            <img src="member.jpg" alt="Client">
+                            <div>
+                                <h4>Alex Johnson</h4>
+                                <p>CEO, TechStart</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Working with Ibrahim was a great experience. He's professional, skilled, and always delivers on time. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <img src="member.jpg" alt="Client">
+                            <div>
+                                <h4>Sarah Williams</h4>
+                                <p>Product Manager, InnovateCo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </div>
-    </section><!-- End Contact Section -->
-    <div class="footer">
-      <div class="closing">
-        <span style="color: rgb(46, 159, 204);"><i>Ibrahim Fonyuy</i> &copy 2025</span>
-      </div>
-    </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's work together on your next project</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!</p>
+                    
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>ibrahimfonyuy06@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <p>+237 677 020 718</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <p>Bambili, Northwest Region, Cameroon</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h4>Follow Me</h4>
+                        <div class="social-icons">
+                            <a href="https://github.com/IBRAHIMFONYUY" target="_blank" class="social-icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/ibrahim-fonyuy-71754436b" target="_blank" class="social-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://facebook.com/fonyuyibrahim" target="_blank" class="social-icon">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://wa.me/237677020718" target="_blank" class="social-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contact-form" class="form">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  </main><!-- End #main -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>RahimStudios</h3>
+                    <p>Building digital solutions that matter.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Services</h4>
+                        <ul>
+                            <li>Web Development</li>
+                            <li>Mobile Apps</li>
+                            <li>Backend APIs</li>
+                            <li>UI/UX Design</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <div class="footer-social">
+                            <a href="https://github.com/IBRAHIMFONYUY" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/ibrahim-fonyuy-71754436b" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://facebook.com/fonyuyibrahim" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://wa.me/237677020718" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 RahimStudios. Designed and developed by Ibrahim Fonyuy.</p>
+            </div>
+        </div>
+    </footer>
 
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"
-    style="background-color: var(--background-color); float:left;">⬆</a>
-
+    <!-- Scripts -->
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="aos.js"></script>
+    <script src="glightbox.min.js"></script>
+    <script src="swiper-bundle.min.js"></script>
+    <script src="typed.umd.js"></script>
+    <script src="main.js"></script>
 </body>
-
-<script src="purecounter_vanilla.js"></script>
-<script src="aos.js"></script>
-<script src="bootstrap.bundle.min.js"></script>
-<script src="glightbox.min.js"></script>
-<script src="isotope.pkgd.min.js"></script>
-<script src="swiper-bundle.min.js"></script>
-<script src="typed.umd.js"></script>
-<script src="noframework.waypoints.js"></script>
-<script src="script.js"></script>
-
-<script src="plugins/jquery/jquery.min.js"></script>
-
-<!-- Bootstrap4 -->
-<script src="plugins/bootstrap/bootstrap.min.js"></script>
-<!-- Parallax -->
-<script src="plugins/parallax/jquery.parallax-1.1.3.js"></script>
-<!-- lightbox -->
-<script src="plugins/lightbox2/js/lightbox.min.js"></script>
-<!-- Owl Carousel -->
-<script src="plugins/slick/slick.min.js"></script>
-<!-- filter -->
-<script src="plugins/filterizr/jquery.filterizr.min.js"></script>
-<!-- Smooth Scroll js -->
-<script src="plugins/smooth-scroll/smooth-scroll.min.js"></script>
-<!-- Google Map -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU"></script>
-<script src="plugins/google-map/gmap.js"></script>
-
-<!-- Custom js -->
-<script src="js/script.js"></script>
-
-<!-- Template Main JS File -->
-<script src="main.js"></script>
-
 </html>

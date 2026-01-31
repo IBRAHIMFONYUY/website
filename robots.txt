@@ -1,0 +1,24 @@
+# RahimStudios - Robots.txt
+# https://ibrahimfonyuy.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ibrahimfonyuy.com/sitemap.xml
+
+# Block common non-content directories
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: *.tmp$
+Disallow: *.log$
+
+# Allow search engines to crawl important content
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /plugins/
+
+# Crawl delay (optional, be respectful)
+Crawl-delay: 1
