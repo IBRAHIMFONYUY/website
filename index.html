@@ -35,10 +35,9 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="aos.css">
+    <link rel="stylesheet" href="animate.css">
     <link rel="stylesheet" href="glightbox.min.css">
     <link rel="stylesheet" href="swiper-bundle.min.css">
-    <link rel="stylesheet" href="animate.css">
     <link rel="stylesheet" href="styles.css">
     
     <title>Ibrahim Fonyuy | Software Developer (Django, React, Python) | IBRAHIMFONYUY</title>
@@ -69,12 +68,36 @@
 </head>
 
 <body>
+    <!-- Theme Transition Overlay -->
+    <div class="theme-transition-overlay" id="theme-transition-overlay"></div>
+    
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    
     <!-- Preloader -->
     <div id="preloader">
         <div class="loader">
-            <div class="loader-circle"></div>
-            <div class="loader-text">IBRAHIM FONYUY</div>
+            <div class="loader-container">
+                <div class="loader-circle"></div>
+                <div class="loader-text">IBRAHIM FONYUY</div>
+                <div class="loader-subtitle">Software Developer</div>
+                <div class="loader-dots">
+                    <div class="loader-dot"></div>
+                    <div class="loader-dot"></div>
+                    <div class="loader-dot"></div>
+                </div>
+                <div class="preloader-progress">
+                    <div class="preloader-progress-bar"></div>
+                </div>
+            </div>
         </div>
+        <!-- Preloader Particles -->
+        <div class="preloader-particle"></div>
+        <div class="preloader-particle"></div>
+        <div class="preloader-particle"></div>
+        <div class="preloader-particle"></div>
+        <div class="preloader-particle"></div>
+        <div class="preloader-particle"></div>
     </div>
 
     <!-- Navigation -->
@@ -90,6 +113,9 @@
                 <a href="#services" class="nav-link">Services</a>
                 <a href="#portfolio" class="nav-link">Portfolio</a>
                 <a href="#contact" class="nav-link">Contact</a>
+                <button class="theme-toggle" id="theme-toggle" onclick="toggleThemeWithEffect()">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
             </div>
             <div class="nav-toggle" id="nav-toggle">
                 <span class="bar"></span>
@@ -104,16 +130,34 @@
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text" data-aos="fade-up" data-aos-delay="100">
+                    <div class="hero-badge">
+                        <span class="badge-text">Welcome to my portfolio</span>
+                    </div>
                     <h1 class="hero-title">
                         Hi, I'm <span class="highlight">Ibrahim Fonyuy</span>
                     </h1>
                     <h2 class="hero-subtitle">
                         <span class="typing-text">Software Developer</span>
+                        
                     </h2>
                     <p class="hero-description">
-                        A passionate <strong>Software Developer</strong> building scalable web applications with <strong>Django, React, and Python</strong>. 
-                        I create solutions that solve real-world problems and empower people through technology.
+                        
+                        A passionate <strong>software developer</strong> and <strong>builder</strong> focused on creating scalable digital products that solve <strong>real-world problems</strong> and empower people through technology.
                     </p>
+                    <!-- <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="2">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="10">0</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="5">0</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                    </div> -->
                     <div class="hero-buttons">
                         <a href="#portfolio" class="btn btn-primary">
                             <i class="fas fa-briefcase"></i> View Projects
@@ -121,26 +165,44 @@
                         <a href="#contact" class="btn btn-outline">
                             <i class="fas fa-envelope"></i> Hire Me
                         </a>
+                        <a href="#" class="btn btn-ghost" id="cv-download">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
                     </div>
                 </div>
                 <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
                     <div class="image-container">
+                        <div class="hero-bg-shapes">
+                            <div class="shape shape-1"></div>
+                            <div class="shape shape-2"></div>
+                            <div class="shape shape-3"></div>
+                        </div>
                         <img src="image.png" alt="Ibrahim Fonyuy" class="hero-img">
                         <div class="floating-elements">
-                            <div class="floating-card django">
+                            <div class="floating-card django" data-aos="fade-up" data-aos-delay="400">
                                 <i class="fab fa-python"></i>
                                 <span>Django</span>
                             </div>
-                            <div class="floating-card react">
+                            <div class="floating-card react" data-aos="fade-up" data-aos-delay="500">
                                 <i class="fab fa-react"></i>
                                 <span>React</span>
                             </div>
-                            <div class="floating-card python">
-                                <i class="fab fa-python"></i>
-                                <span>Python</span>
+                            <div class="floating-card python" data-aos="fade-up" data-aos-delay="600">
+                                <i class="fab fa-react"></i>
+                                <span>Next.js</span>
+                            </div>
+                            <div class="floating-card nodejs" data-aos="fade-up" data-aos-delay="700">
+                                <i class="fab fa-node-js"></i>
+                                <span>Node.js</span>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="800">
+                <div class="scroll-text">Scroll Down</div>
+                <div class="scroll-arrow">
+                    <i class="fas fa-chevron-down"></i>
                 </div>
             </div>
         </div>
@@ -151,41 +213,108 @@
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Get to know me better</p>
+                <p class="section-subtitle">Passionate about creating impactful digital solutions</p>
             </div>
             
             <div class="about-content">
                 <div class="about-text" data-aos="fade-right">
-                    <h3>Building Digital Solutions That Matter</h3>
-                    <p>
-                        I'm a software developer from Cameroon with a strong passion for building impactful digital solutions. 
-                        I specialize in backend and full-stack development, focusing on clean architecture, performance, and scalability.
-                    </p>
-                    <p>
-                        My goal is to use technology to create meaningful change and inspire the next generation of developers. 
-                        I believe in writing clean, maintainable code and building applications that solve real problems.
-                    </p>
+                    <div class="about-intro">
+                        <h3>Building Digital Solutions That Matter</h3>
+                        <p class="about-tagline">
+                            <span class="highlight-text">Software Developer</span> • 
+                            <span class="highlight-text">Problem Solver</span> • 
+                            <span class="highlight-text">Tech Enthusiast</span>
+                        </p>
+                    </div>
+                    
+                    <div class="about-description">
+                        <p>
+                            I'm a passionate software developer from Cameroon with a strong drive to build impactful digital solutions that make a real difference. 
+                            I specialize in backend and full-stack development, with a deep focus on clean architecture, performance optimization, and scalable systems.
+                        </p>
+                        <p>
+                            My journey in tech is driven by a desire to create meaningful change and inspire the next generation of developers in Africa and beyond. 
+                            I believe in writing clean, maintainable code and building applications that solve real-world problems while delivering exceptional user experiences.
+                        </p>
+                    </div>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Clean Code Advocate</h4>
+                                <p>Writing maintainable, scalable code that stands the test of time</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Performance Driven</h4>
+                                <p>Optimizing applications for speed, efficiency, and user satisfaction</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Community Focused</h4>
+                                <p>Sharing knowledge and empowering the next generation of developers</p>
+                            </div>
+                        </div>
+                    </div>
                     
                     <div class="about-stats">
-                        <div class="stat-item">
-                            <h4>2+ Years</h4>
-                            <p>Experience</p>
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="stat-number" data-count="3">0+</div>
+                            <div class="stat-label">Years Experience</div>
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <h4>10+ Projects</h4>
-                            <p>Completed</p>
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="stat-number" data-count="15">0+</div>
+                            <div class="stat-label">Projects Completed</div>
+                            <div class="stat-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <h4>5+ Technologies</h4>
-                            <p>Mastered</p>
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="stat-number" data-count="10">0+</div>
+                            <div class="stat-label">Technologies</div>
+                            <div class="stat-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="about-image" data-aos="fade-left">
-                    <div class="image-frame">
-                        <img src="image2.png" alt="Ibrahim Fonyuy">
-                        <div class="frame-decoration"></div>
+                    <div class="image-container">
+                        <div class="about-bg-shapes">
+                            <div class="about-shape shape-1"></div>
+                            <div class="about-shape shape-2"></div>
+                            <div class="about-shape shape-3"></div>
+                        </div>
+                        <div class="image-frame">
+                            <img src="image2.png" alt="Ibrahim Fonyuy">
+                            <div class="frame-decoration"></div>
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h4>Let's Build Something Amazing</h4>
+                                    <p>Ready to turn ideas into reality</p>
+                                    <a href="#contact" class="btn btn-primary btn-sm">
+                                        <i class="fas fa-envelope"></i> Get In Touch
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -203,32 +332,41 @@
             <div class="skills-grid">
                 <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
                     <h3><i class="fas fa-server"></i> Backend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>Django</span>
-                                <span>90%</span>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-python"></i>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>Python</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
+                            <div class="tech-info">
+                                <h4>Python</h4>
+                                <p>Django, Flask, FastAPI</p>
                             </div>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>Node.js</span>
-                                <span>75%</span>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-node-js"></i>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
+                            <div class="tech-info">
+                                <h4>Node.js</h4>
+                                <p>Express, NestJS</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="tech-info">
+                                <h4>Databases</h4>
+                                <p>PostgreSQL, MongoDB, MySQL</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="tech-info">
+                                <h4>Cloud</h4>
+                                <p>AWS, Vercel, Heroku</p>
                             </div>
                         </div>
                     </div>
@@ -236,32 +374,41 @@
                 
                 <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
                     <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>React</span>
-                                <span>80%</span>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-react"></i>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>JavaScript</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
+                            <div class="tech-info">
+                                <h4>React</h4>
+                                <p>Next.js, Redux, Hooks</p>
                             </div>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>HTML/CSS</span>
-                                <span>95%</span>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-js"></i>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
+                            <div class="tech-info">
+                                <h4>JavaScript</h4>
+                                <p>ES6+, TypeScript, jQuery</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <div class="tech-info">
+                                <h4>CSS</h4>
+                                <p>Tailwind, Bootstrap, SASS</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="tech-info">
+                                <h4>HTML5</h4>
+                                <p>Semantic, Responsive, SEO</p>
                             </div>
                         </div>
                     </div>
@@ -269,32 +416,41 @@
                 
                 <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
                     <h3><i class="fas fa-tools"></i> Tools & Others</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>Git</span>
-                                <span>85%</span>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-git-alt"></i>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>React Native</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
+                            <div class="tech-info">
+                                <h4>Git</h4>
+                                <p>Version Control, GitHub, GitLab</p>
                             </div>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span>C++</span>
-                                <span>70%</span>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fab fa-mobile-alt"></i>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%"></div>
+                            <div class="tech-info">
+                                <h4>Mobile</h4>
+                                <p>React Native, Flutter</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="tech-info">
+                                <h4>APIs</h4>
+                                <p>REST, GraphQL, WebSocket</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="tech-info">
+                                <h4>Security</h4>
+                                <p>JWT, OAuth, HTTPS</p>
                             </div>
                         </div>
                     </div>
@@ -308,60 +464,179 @@
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">Services</h2>
-                <p class="section-subtitle">What I can do for you</p>
+                <p class="section-subtitle">Transforming ideas into powerful digital solutions</p>
+            </div>
+            
+            <div class="services-intro" data-aos="fade-up" data-aos-delay="100">
+                <p>I offer comprehensive development services tailored to bring your vision to life. From concept to deployment, I deliver solutions that combine cutting-edge technology with exceptional user experiences.</p>
             </div>
             
             <div class="services-grid">
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <i class="fas fa-globe"></i>
+                <div class="service-card enhanced-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="service-badge">
+                            <span>Most Popular</span>
+                        </div>
                     </div>
                     <h3>Web Application Development</h3>
-                    <p>Full-stack apps using Django, React, and modern tools. From concept to deployment, I build scalable web applications that solve real business problems.</p>
+                    <p>Building scalable, high-performance web applications that drive business growth and deliver exceptional user experiences.</p>
+                    
+                    <div class="service-tech-stack">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">AWS</span>
+                    </div>
+                    
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Custom Web Apps</li>
-                        <li><i class="fas fa-check"></i> API Development</li>
-                        <li><i class="fas fa-check"></i> Database Design</li>
+                        <li><i class="fas fa-check-circle"></i> Custom Web Applications</li>
+                        <li><i class="fas fa-check-circle"></i> RESTful API Development</li>
+                        <li><i class="fas fa-check-circle"></i> Database Architecture</li>
+                        <li><i class="fas fa-check-circle"></i> Cloud Deployment</li>
+                        <li><i class="fas fa-check-circle"></i> Performance Optimization</li>
                     </ul>
+                    
+                    <div class="service-footer">
+                        <div class="service-price">
+                            <span class="price-label">Starting from</span>
+                            <span class="price-value">$1,500</span>
+                        </div>
+                        <a href="#contact" class="btn btn-primary btn-sm">
+                            <i class="fas fa-arrow-right"></i> Get Quote
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                <div class="service-card enhanced-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="service-badge">
+                            <span>Trending</span>
+                        </div>
                     </div>
                     <h3>Mobile App Development</h3>
-                    <p>Cross-platform mobile applications using React Native. I create performant, user-friendly mobile apps that work seamlessly on both iOS and Android.</p>
+                    <p>Creating native-like mobile experiences with React Native, delivering seamless performance across iOS and Android platforms.</p>
+                    
+                    <div class="service-tech-stack">
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Redux</span>
+                    </div>
+                    
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> React Native Apps</li>
-                        <li><i class="fas fa-check"></i> UI/UX Design</li>
-                        <li><i class="fas fa-check"></i> App Store Deployment</li>
+                        <li><i class="fas fa-check-circle"></i> Cross-Platform Apps</li>
+                        <li><i class="fas fa-check-circle"></i> Native UI/UX Design</li>
+                        <li><i class="fas fa-check-circle"></i> App Store Deployment</li>
+                        <li><i class="fas fa-check-circle"></i> Push Notifications</li>
+                        <li><i class="fas fa-check-circle"></i> Offline Support</li>
                     </ul>
+                    
+                    <div class="service-footer">
+                        <div class="service-price">
+                            <span class="price-label">Starting from</span>
+                            <span class="price-value">$2,000</span>
+                        </div>
+                        <a href="#contact" class="btn btn-primary btn-sm">
+                            <i class="fas fa-arrow-right"></i> Get Quote
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
+                <div class="service-card enhanced-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="service-badge">
+                            <span>Expert</span>
+                        </div>
                     </div>
                     <h3>Backend Development</h3>
-                    <p>Secure, scalable APIs and database design using Django and Python. I build robust backend systems that power modern applications.</p>
+                    <p>Designing robust, secure, and scalable backend systems that power modern applications with high-performance APIs.</p>
+                    
+                    <div class="service-tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                    
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> REST APIs</li>
-                        <li><i class="fas fa-check"></i> Database Architecture</li>
-                        <li><i class="fas fa-check"></i> System Integration</li>
+                        <li><i class="fas fa-check-circle"></i> REST & GraphQL APIs</li>
+                        <li><i class="fas fa-check-circle"></i> Microservices Architecture</li>
+                        <li><i class="fas fa-check-circle"></i> Database Design</li>
+                        <li><i class="fas fa-check-circle"></i> Authentication Systems</li>
+                        <li><i class="fas fa-check-circle"></i> CI/CD Pipelines</li>
                     </ul>
+                    
+                    <div class="service-footer">
+                        <div class="service-price">
+                            <span class="price-label">Starting from</span>
+                            <span class="price-value">$1,200</span>
+                        </div>
+                        <a href="#contact" class="btn btn-primary btn-sm">
+                            <i class="fas fa-arrow-right"></i> Get Quote
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-icon">
-                        <i class="fas fa-paint-brush"></i>
+                <div class="service-card enhanced-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="service-badge">
+                            <span>Premium</span>
+                        </div>
                     </div>
                     <h3>Frontend Development</h3>
-                    <p>Responsive, user-friendly interfaces with React and modern CSS. I create beautiful, performant frontend experiences that users love.</p>
+                    <p>Crafting beautiful, responsive, and interactive user interfaces that captivate users and drive engagement.</p>
+                    
+                    <div class="service-tech-stack">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Tailwind</span>
+                    </div>
+                    
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> React Components</li>
-                        <li><i class="fas fa-check"></i> Responsive Design</li>
-                        <li><i class="fas fa-check"></i> Performance Optimization</li>
+                        <li><i class="fas fa-check-circle"></i> Responsive Web Design</li>
+                        <li><i class="fas fa-check-circle"></i> Component Architecture</li>
+                        <li><i class="fas fa-check-circle"></i> State Management</li>
+                        <li><i class="fas fa-check-circle"></i> Performance Optimization</li>
+                        <li><i class="fas fa-check-circle"></i> SEO Implementation</li>
                     </ul>
+                    
+                    <div class="service-footer">
+                        <div class="service-price">
+                            <span class="price-label">Starting from</span>
+                            <span class="price-value">$1,000</span>
+                        </div>
+                        <a href="#contact" class="btn btn-primary btn-sm">
+                            <i class="fas fa-arrow-right"></i> Get Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="services-cta" data-aos="fade-up" data-aos-delay="500">
+                <div class="cta-content">
+                    <h3>Ready to start your project?</h3>
+                    <p>Let's discuss how I can help bring your ideas to life with custom solutions tailored to your needs.</p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-calendar"></i> Schedule Consultation
+                        </a>
+                        <a href="#portfolio" class="btn btn-outline">
+                            <i class="fas fa-eye"></i> View My Work
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -372,34 +647,81 @@
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">Portfolio</h2>
-                <p class="section-subtitle">Recent projects I've worked on</p>
+                <p class="section-subtitle">Showcasing my best work and creative solutions</p>
             </div>
             
-            <div class="portfolio-filters" data-aos="fade-up">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web">Web Apps</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button>
-                <button class="filter-btn" data-filter="design">Design</button>
+            <div class="portfolio-intro" data-aos="fade-up" data-aos-delay="100">
+                <p>Explore my recent projects that demonstrate technical expertise, creative problem-solving, and attention to detail. Each project represents a unique challenge and innovative solution.</p>
+            </div>
+            
+            <div class="portfolio-stats" data-aos="fade-up" data-aos-delay="200">
+                <div class="portfolio-stat">
+                    <div class="stat-number" data-count="15">0+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="portfolio-stat">
+                    <div class="stat-number" data-count="8">0+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="portfolio-stat">
+                    <div class="stat-number" data-count="12">0+</div>
+                    <div class="stat-label">Technologies Used</div>
+                </div>
+            </div>
+            
+            <div class="portfolio-filters" data-aos="fade-up" data-aos-delay="300">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> All Projects
+                </button>
+                <button class="filter-btn" data-filter="web">
+                    <i class="fas fa-globe"></i> Web Apps
+                </button>
+                <button class="filter-btn" data-filter="mobile">
+                    <i class="fas fa-mobile-alt"></i> Mobile
+                </button>
+                <button class="filter-btn" data-filter="design">
+                    <i class="fas fa-paint-brush"></i> Design
+                </button>
+                <button class="filter-btn" data-filter="api">
+                    <i class="fas fa-code"></i> APIs
+                </button>
             </div>
             
             <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                <div class="portfolio-item enhanced-card" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-header">
+                        <div class="portfolio-category-badge">
+                            <span><i class="fas fa-globe"></i> Web App</span>
+                        </div>
+                        <div class="portfolio-status">
+                            <span class="status-badge completed">Completed</span>
+                        </div>
+                    </div>
                     <div class="portfolio-image">
                         <img src="images/p1.png" alt="E-Commerce Platform">
                         <div class="portfolio-overlay">
                             <div class="portfolio-content">
                                 <h3>E-Commerce Platform</h3>
-                                <p>A modern online shopping platform with payment integration and inventory management.</p>
+                                <p>A comprehensive online shopping platform with advanced features including real-time inventory management, secure payment processing, and personalized user experiences.</p>
                                 <div class="portfolio-tech">
-                                    <span>Django</span>
-                                    <span>React</span>
-                                    <span>PostgreSQL</span>
+                                    <span class="tech-tag"><i class="fab fa-python"></i> Django</span>
+                                    <span class="tech-tag"><i class="fab fa-react"></i> React</span>
+                                    <span class="tech-tag"><i class="fas fa-database"></i> PostgreSQL</span>
+                                    <span class="tech-tag"><i="fab fa-cc-stripe"></i> Stripe</span>
+                                </div>
+                                <div class="portfolio-features">
+                                    <span><i class="fas fa-shopping-cart"></i> E-Commerce</span>
+                                    <span><i class="fas fa-credit-card"></i> Payment Gateway</span>
+                                    <span><i class="fas fa-chart-line"></i> Analytics</span>
                                 </div>
                                 <div class="portfolio-links">
                                     <a href="https://github.com/IBRAHIMFONYUY" class="btn btn-sm" target="_blank">
-                                        <i class="fab fa-github"></i> Code
+                                        <i class="fab fa-github"></i> View Code
                                     </a>
-                                    <a href="#" class="btn btn-sm btn-primary">
+                                    <a href="#" class="btn btn-sm btn-primary" onclick="openLightbox('E-Commerce Platform', 'images/p1.png')">
+                                        <i class="fas fa-search-plus"></i> Preview
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-outline">
                                         <i class="fas fa-external-link-alt"></i> Live Demo
                                     </a>
                                 </div>
@@ -408,23 +730,40 @@
                     </div>
                 </div>
                 
-                <div class="portfolio-item" data-category="mobile" data-aos="fade-up" data-aos-delay="200">
+                <div class="portfolio-item enhanced-card" data-category="mobile" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-header">
+                        <div class="portfolio-category-badge">
+                            <span><i class="fas fa-mobile-alt"></i> Mobile</span>
+                        </div>
+                        <div class="portfolio-status">
+                            <span class="status-badge completed">Completed</span>
+                        </div>
+                    </div>
                     <div class="portfolio-image">
                         <img src="images/p2.png" alt="Mobile Banking App">
                         <div class="portfolio-overlay">
                             <div class="portfolio-content">
                                 <h3>Mobile Banking App</h3>
-                                <p>Secure cross-platform banking application with biometric authentication.</p>
+                                <p>Secure cross-platform banking application featuring biometric authentication, real-time transactions, and comprehensive financial management tools for modern banking needs.</p>
                                 <div class="portfolio-tech">
-                                    <span>React Native</span>
-                                    <span>Node.js</span>
-                                    <span>MongoDB</span>
+                                    <span class="tech-tag"><i class="fab fa-react"></i> React Native</span>
+                                    <span class="tech-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                                    <span class="tech-tag"><i class="fas fa-database"></i> MongoDB</span>
+                                    <span class="tech-tag"><i class="fas fa-fingerprint"></i> Biometric</span>
+                                </div>
+                                <div class="portfolio-features">
+                                    <span><i class="fas fa-mobile-alt"></i> Cross-Platform</span>
+                                    <span><i class="fas fa-shield-alt"></i> Secure</span>
+                                    <span><i class="fas fa-bell"></i> Notifications</span>
                                 </div>
                                 <div class="portfolio-links">
                                     <a href="https://github.com/IBRAHIMFONYUY" class="btn btn-sm" target="_blank">
-                                        <i class="fab fa-github"></i> Code
+                                        <i class="fab fa-github"></i> View Code
                                     </a>
-                                    <a href="#" class="btn btn-sm btn-primary">
+                                    <a href="#" class="btn btn-sm btn-primary" onclick="openLightbox('Mobile Banking App', 'images/p2.png')">
+                                        <i class="fas fa-search-plus"></i> Preview
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-outline">
                                         <i class="fas fa-external-link-alt"></i> Live Demo
                                     </a>
                                 </div>
@@ -433,23 +772,40 @@
                     </div>
                 </div>
                 
-                <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="300">
+                <div class="portfolio-item enhanced-card" data-category="web" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-header">
+                        <div class="portfolio-category-badge">
+                            <span><i class="fas fa-globe"></i> Web App</span>
+                        </div>
+                        <div class="portfolio-status">
+                            <span class="status-badge completed">Completed</span>
+                        </div>
+                    </div>
                     <div class="portfolio-image">
                         <img src="images/p3.png" alt="Task Management System">
                         <div class="portfolio-overlay">
                             <div class="portfolio-content">
                                 <h3>Task Management System</h3>
-                                <p>Collaborative project management tool with real-time updates and team features.</p>
+                                <p>Collaborative project management platform with real-time updates, team collaboration features, and advanced project tracking capabilities for enhanced productivity.</p>
                                 <div class="portfolio-tech">
-                                    <span>Django</span>
-                                    <span>JavaScript</span>
-                                    <span>WebSocket</span>
+                                    <span class="tech-tag"><i class="fab fa-python"></i> Django</span>
+                                    <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
+                                    <span class="tech-tag"><i class="fas fa-plug"></i> WebSocket</span>
+                                    <span class="tech-tag"><i class="fas fa-users"></i> Real-time</span>
+                                </div>
+                                <div class="portfolio-features">
+                                    <span><i class="fas fa-tasks"></i> Task Management</span>
+                                    <span><i class="fas fa-users"></i> Team Collaboration</span>
+                                    <span><i class="fas fa-chart-bar"></i> Analytics</span>
                                 </div>
                                 <div class="portfolio-links">
                                     <a href="https://github.com/IBRAHIMFONYUY" class="btn btn-sm" target="_blank">
-                                        <i class="fab fa-github"></i> Code
+                                        <i class="fab fa-github"></i> View Code
                                     </a>
-                                    <a href="#" class="btn btn-sm btn-primary">
+                                    <a href="#" class="btn btn-sm btn-primary" onclick="openLightbox('Task Management System', 'images/p3.png')">
+                                        <i class="fas fa-search-plus"></i> Preview
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-outline">
                                         <i class="fas fa-external-link-alt"></i> Live Demo
                                     </a>
                                 </div>
@@ -458,28 +814,102 @@
                     </div>
                 </div>
                 
-                <div class="portfolio-item" data-category="design" data-aos="fade-up" data-aos-delay="400">
+                <div class="portfolio-item enhanced-card" data-category="design" data-aos="fade-up" data-aos-delay="400">
+                    <div class="portfolio-header">
+                        <div class="portfolio-category-badge">
+                            <span><i class="fas fa-paint-brush"></i> Design</span>
+                        </div>
+                        <div class="portfolio-status">
+                            <span class="status-badge completed">Completed</span>
+                        </div>
+                    </div>
                     <div class="portfolio-image">
                         <img src="images/p4.png" alt="Portfolio Website">
                         <div class="portfolio-overlay">
                             <div class="portfolio-content">
                                 <h3>Portfolio Website</h3>
-                                <p>Modern, responsive portfolio with smooth animations and optimized performance.</p>
+                                <p>Modern, responsive portfolio website showcasing advanced web development techniques, smooth animations, and optimized performance for exceptional user experience.</p>
                                 <div class="portfolio-tech">
-                                    <span>React</span>
-                                    <span>Tailwind CSS</span>
-                                    <span>Framer Motion</span>
+                                    <span class="tech-tag"><i class="fab fa-react"></i> React</span>
+                                    <span class="tech-tag"><i class="fas fa-wind"></i> Tailwind</span>
+                                    <span class="tech-tag"><i class="fas fa-magic"></i> Framer Motion</span>
+                                    <span class="tech-tag"><i class="fas fa-tachometer-alt"></i> Performance</span>
+                                </div>
+                                <div class="portfolio-features">
+                                    <span><i class="fas fa-mobile-alt"></i> Responsive</span>
+                                    <span><i class="fas fa-palette"></i> Modern Design</span>
+                                    <span><i class="fas fa-tachometer-alt"></i> Optimized</span>
                                 </div>
                                 <div class="portfolio-links">
                                     <a href="https://github.com/IBRAHIMFONYUY" class="btn btn-sm" target="_blank">
-                                        <i class="fab fa-github"></i> Code
+                                        <i class="fab fa-github"></i> View Code
                                     </a>
-                                    <a href="#" class="btn btn-sm btn-primary">
+                                    <a href="#" class="btn btn-sm btn-primary" onclick="openLightbox('Portfolio Website', 'images/p4.png')">
+                                        <i class="fas fa-search-plus"></i> Preview
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-outline">
                                         <i class="fas fa-external-link-alt"></i> Live Demo
                                     </a>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item enhanced-card" data-category="api" data-aos="fade-up" data-aos-delay="500">
+                    <div class="portfolio-header">
+                        <div class="portfolio-category-badge">
+                            <span><i class="fas fa-code"></i> API</span>
+                        </div>
+                        <div class="portfolio-status">
+                            <span class="status-badge completed">Completed</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-image">
+                        <img src="p1.jpg" alt="REST API Service">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h3>REST API Service</h3>
+                                <p>Scalable RESTful API service with comprehensive documentation, authentication, rate limiting, and advanced features for seamless integration.</p>
+                                <div class="portfolio-tech">
+                                    <span class="tech-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                                    <span class="tech-tag"><i class="fas fa-express"></i> Express</span>
+                                    <span class="tech-tag"><i class="fas fa-database"></i> MongoDB</span>
+                                    <span class="tech-tag"><i class="fas fa-key"></i> JWT Auth</span>
+                                </div>
+                                <div class="portfolio-features">
+                                    <span><i class="fas fa-plug"></i> RESTful</span>
+                                    <span><i class="fas fa-shield-alt"></i> Secure</span>
+                                    <span><i class="fas fa-book"></i> Documented</span>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="https://github.com/IBRAHIMFONYUY" class="btn btn-sm" target="_blank">
+                                        <i class="fab fa-github"></i> View Code
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-primary">
+                                        <i class="fas fa-file-alt"></i> API Docs
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-outline">
+                                        <i class="fas fa-external-link-alt"></i> Try API
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="portfolio-cta" data-aos="fade-up" data-aos-delay="600">
+                <div class="cta-content">
+                    <h3>Have a project in mind?</h3>
+                    <p>I'm always excited to work on new challenges and bring innovative ideas to life. Let's discuss how I can help with your next project.</p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i> Start Your Project
+                        </a>
+                        <a href="#" class="btn btn-outline" onclick="downloadPortfolio()">
+                            <i class="fas fa-download"></i> Download Portfolio
+                        </a>
                     </div>
                 </div>
             </div>
@@ -490,48 +920,256 @@
     <section class="testimonials">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Testimonials</h2>
-                <p class="section-subtitle">What clients say about me</p>
+                <h2 class="section-title">Client Testimonials</h2>
+                <p class="section-subtitle">What people say about working with me</p>
             </div>
             
-            <div class="testimonials-slider" data-aos="fade-up">
-                <div class="testimonial-item">
-                    <div class="testimonial-content">
-                        <div class="testimonial-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+            <div class="testimonials-intro" data-aos="fade-up" data-aos-delay="100">
+                <p>Don't just take my word for it. Here's what clients and colleagues have to say about my work, professionalism, and collaboration.</p>
+            </div>
+            
+            <div class="testimonials-stats" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial-stat">
+                    <div class="stat-number" data-count="4.9">0</div>
+                    <div class="stat-label">Average Rating</div>
+                    <div class="stat-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="testimonial-stat">
+                    <div class="stat-number" data-count="25">0+</div>
+                    <div class="stat-label">Happy Clients</div>
+                    <div class="stat-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                </div>
+                <div class="testimonial-stat">
+                    <div class="stat-number" data-count="50">0+</div>
+                    <div class="stat-label">Projects Delivered</div>
+                    <div class="stat-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="300">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-item enhanced-card">
+                            <div class="testimonial-header">
+                                <div class="testimonial-rating">
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-number">5.0</span>
+                                </div>
+                                <div class="testimonial-badge">
+                                    <span class="badge verified">
+                                        <i class="fas fa-check-circle"></i> Verified
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <p class="testimonial-text">"Ibrahim delivered an exceptional e-commerce platform that exceeded our expectations. His attention to detail, problem-solving skills, and ability to understand complex business requirements are outstanding. The platform has increased our sales by 40% within the first quarter."</p>
+                                <div class="testimonial-project">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span>E-Commerce Platform Development</span>
+                                </div>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-image">
+                                    <img src="member.jpg" alt="Alex Johnson">
+                                    <div class="author-status online"></div>
+                                </div>
+                                <div class="author-info">
+                                    <h4>Alex Johnson</h4>
+                                    <p class="author-title">CEO, TechStart</p>
+                                    <p class="author-location">
+                                        <i class="fas fa-map-marker-alt"></i> San Francisco, CA
+                                    </p>
+                                </div>
+                                <div class="testimonial-meta">
+                                    <span class="testimonial-date">
+                                        <i class="fas fa-calendar"></i> 2 months ago
+                                    </span>
+                                </div>
+                            </div>
                         </div>
-                        <p>"Ibrahim delivered an exceptional e-commerce platform that exceeded our expectations. His attention to detail and problem-solving skills are outstanding."</p>
-                        <div class="testimonial-author">
-                            <img src="member.jpg" alt="Client">
-                            <div>
-                                <h4>Alex Johnson</h4>
-                                <p>CEO, TechStart</p>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="testimonial-item enhanced-card">
+                            <div class="testimonial-header">
+                                <div class="testimonial-rating">
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-number">5.0</span>
+                                </div>
+                                <div class="testimonial-badge">
+                                    <span class="badge verified">
+                                        <i class="fas fa-check-circle"></i> Verified
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <p class="testimonial-text">"Working with Ibrahim was a great experience. He's professional, skilled, and always delivers on time. The mobile banking app he developed for us has received excellent feedback from users. His expertise in React Native and backend integration is impressive."</p>
+                                <div class="testimonial-project">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>Mobile Banking App Development</span>
+                                </div>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-image">
+                                    <img src="member.jpg" alt="Sarah Williams">
+                                    <div class="author-status online"></div>
+                                </div>
+                                <div class="author-info">
+                                    <h4>Sarah Williams</h4>
+                                    <p class="author-title">Product Manager, InnovateCo</p>
+                                    <p class="author-location">
+                                        <i class="fas fa-map-marker-alt"></i> New York, NY
+                                    </p>
+                                </div>
+                                <div class="testimonial-meta">
+                                    <span class="testimonial-date">
+                                        <i class="fas fa-calendar"></i> 3 months ago
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="testimonial-item enhanced-card">
+                            <div class="testimonial-header">
+                                <div class="testimonial-rating">
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="rating-number">4.8</span>
+                                </div>
+                                <div class="testimonial-badge">
+                                    <span class="badge featured">
+                                        <i class="fas fa-star"></i> Featured
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <p class="testimonial-text">"Ibrahim's technical skills and communication are top-notch. He transformed our outdated task management system into a modern, efficient platform that our team loves using. The real-time collaboration features he implemented have significantly improved our productivity."</p>
+                                <div class="testimonial-project">
+                                    <i class="fas fa-tasks"></i>
+                                    <span>Task Management System</span>
+                                </div>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-image">
+                                    <img src="member.jpg" alt="Michael Chen">
+                                    <div class="author-status offline"></div>
+                                </div>
+                                <div class="author-info">
+                                    <h4>Michael Chen</h4>
+                                    <p class="author-title">CTO, WorkflowPro</p>
+                                    <p class="author-location">
+                                        <i class="fas fa-map-marker-alt"></i> Austin, TX
+                                    </p>
+                                </div>
+                                <div class="testimonial-meta">
+                                    <span class="testimonial-date">
+                                        <i class="fas fa-calendar"></i> 1 month ago
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="testimonial-item enhanced-card">
+                            <div class="testimonial-header">
+                                <div class="testimonial-rating">
+                                    <div class="rating-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="rating-number">5.0</span>
+                                </div>
+                                <div class="testimonial-badge">
+                                    <span class="badge verified">
+                                        <i class="fas fa-check-circle"></i> Verified
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <p class="testimonial-text">"Ibrahim's portfolio website development was exceptional. He created a stunning, responsive design that perfectly represents our brand. The site loads incredibly fast and has received numerous compliments from our clients. His attention to performance optimization is remarkable."</p>
+                                <div class="testimonial-project">
+                                    <i class="fas fa-globe"></i>
+                                    <span>Portfolio Website</span>
+                                </div>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-image">
+                                    <img src="member.jpg" alt="Emily Rodriguez">
+                                    <div class="author-status online"></div>
+                                </div>
+                                <div class="author-info">
+                                    <h4>Emily Rodriguez</h4>
+                                    <p class="author-title">Marketing Director, Creative Agency</p>
+                                    <p class="author-location">
+                                        <i class="fas fa-map-marker-alt"></i> Los Angeles, CA
+                                    </p>
+                                </div>
+                                <div class="testimonial-meta">
+                                    <span class="testimonial-date">
+                                        <i class="fas fa-calendar"></i> 2 weeks ago
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="testimonial-item">
-                    <div class="testimonial-content">
-                        <div class="testimonial-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>"Working with Ibrahim was a great experience. He's professional, skilled, and always delivers on time. Highly recommended!"</p>
-                        <div class="testimonial-author">
-                            <img src="member.jpg" alt="Client">
-                            <div>
-                                <h4>Sarah Williams</h4>
-                                <p>Product Manager, InnovateCo</p>
-                            </div>
-                        </div>
+                <!-- Navigation -->
+                <div class="swiper-button-next">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            
+            <div class="testimonials-cta" data-aos="fade-up" data-aos-delay="400">
+                <div class="cta-content">
+                    <h3>Ready to work together?</h3>
+                    <p>Join my list of satisfied clients and let's create something amazing together.</p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-comments"></i> Start Conversation
+                        </a>
+                        <a href="#portfolio" class="btn btn-outline">
+                            <i class="fas fa-eye"></i> View My Work
+                        </a>
                     </div>
                 </div>
             </div>
@@ -543,83 +1181,294 @@
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Let's work together on your next project</p>
+                <p class="section-subtitle">Let's bring your ideas to life together</p>
+            </div>
+            
+            <div class="contact-intro" data-aos="fade-up" data-aos-delay="100">
+                <p>Ready to start your next project? I'm here to help you transform your vision into reality. Whether you need a full-stack web application, mobile app, or custom solution, let's discuss how we can work together.</p>
+            </div>
+            
+            <div class="contact-stats" data-aos="fade-up" data-aos-delay="200">
+                <div class="contact-stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>Response Time</h4>
+                        <p>Within 24 hours</p>
+                    </div>
+                </div>
+                <div class="contact-stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>Available</h4>
+                        <p>Worldwide</p>
+                    </div>
+                </div>
+                <div class="contact-stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>Free Consultation</h4>
+                        <p>30 minutes</p>
+                    </div>
+                </div>
             </div>
             
             <div class="contact-content">
-                <div class="contact-info" data-aos="fade-right">
-                    <h3>Let's Connect</h3>
-                    <p>I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!</p>
-                    
-                    <div class="contact-items">
-                        <div class="contact-item">
-                            <div class="contact-icon">
+                <div class="contact-options">
+                    <div class="contact-option" data-aos="fade-right" data-aos-delay="300">
+                        <div class="option-card" data-form="message">
+                            <div class="option-icon">
                                 <i class="fas fa-envelope"></i>
                             </div>
-                            <div class="contact-details">
-                                <h4>Email</h4>
-                                <p>ibrahimfonyuy06@gmail.com</p>
+                            <div class="option-content">
+                                <h3>Send a Message</h3>
+                                <p>Fill out our contact form and we'll get back to you within 24 hours</p>
+                                <div class="option-features">
+                                    <span><i class="fas fa-clock"></i> Quick Response</span>
+                                    <span><i class="fas fa-shield-alt"></i> Secure</span>
+                                    <span><i class="fas fa-globe"></i> Worldwide</span>
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Phone</h4>
-                                <p>+237 677 020 718</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Location</h4>
-                                <p>Bambili, Northwest Region, Cameroon</p>
+                            <div class="option-arrow">
+                                <i class="fas fa-arrow-right"></i>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="social-links">
-                        <h4>Follow Me</h4>
-                        <div class="social-icons">
-                            <a href="https://github.com/IBRAHIMFONYUY" target="_blank" class="social-icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://linkedin.com/in/ibrahim-fonyuy-71754436b" target="_blank" class="social-icon">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://facebook.com/fonyuyibrahim" target="_blank" class="social-icon">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="https://wa.me/237677020718" target="_blank" class="social-icon">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
+                    <div class="contact-option" data-aos="fade-left" data-aos-delay="400">
+                        <div class="option-card" data-form="schedule">
+                            <div class="option-icon">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <div class="option-content">
+                                <h3>Schedule a Call</h3>
+                                <p>Book a 30-minute consultation to discuss your project requirements</p>
+                                <div class="option-features">
+                                    <span><i class="fas fa-video"></i> Video Call</span>
+                                    <span><i class="fas fa-users"></i> Team Meeting</span>
+                                    <span><i class="fas fa-clock"></i> 30 Minutes</span>
+                                </div>
+                            </div>
+                            <div class="option-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="contact-form" data-aos="fade-left">
-                    <form id="contact-form" class="form">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
+                <!-- Message Form (Hidden by default) -->
+                <div class="contact-form-container" id="message-form" style="display: none;">
+                    <div class="form-wrapper enhanced-card">
+                        <div class="form-header">
+                            <button class="back-btn" style="cursor: pointer;" onclick="window.hideForms(); return false;">
+                                <i class="fas fa-arrow-left"></i> Back
+                            </button>
+                            <h3>Send Me a Message</h3>
+                            <p>Fill out the form below and I'll get back to you as soon as possible</p>
                         </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
+                        
+                        <form id="contact-form" class="form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Your Name *</label>
+                                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                                    <span class="form-icon">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Your Email *</label>
+                                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                                    <span class="form-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+                                <span class="form-icon">
+                                    <i class="fas fa-tag"></i>
+                                </span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="project-type">Project Type</label>
+                                <select id="project-type" name="project-type">
+                                    <option value="">Select a project type</option>
+                                    <option value="web-app">Web Application</option>
+                                    <option value="mobile-app">Mobile Application</option>
+                                    <option value="api">API Development</option>
+                                    <option value="consulting">Consulting</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <span class="form-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Your Message *</label>
+                                <textarea id="message" name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
+                                <span class="form-icon">
+                                    <i class="fas fa-comment"></i>
+                                </span>
+                                <div class="char-counter">
+                                    <span id="char-count">0</span> / 500 characters
+                                </div>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    Send me occasional updates about new projects and articles
+                                </label>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i> Send Message
+                                </button>
+                                <button type="button" class="btn btn-outline" onclick="resetForm()">
+                                    <i class="fas fa-redo"></i> Reset Form
+                                </button>
+                            </div>
+                            
+                            <div class="form-note">
+                                <p><i class="fas fa-lock"></i> Your information is secure and will never be shared with third parties.</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Schedule Form (Hidden by default) -->
+                <div class="contact-form-container" id="schedule-form" style="display: none;">
+                    <div class="form-wrapper enhanced-card">
+                        <div class="form-header">
+                            <button class="back-btn"  style="cursor: pointer;" onclick="window.hideForms(); return false;">
+                                <i class="fas fa-arrow-left"></i> Back
+                            </button>
+                            <h3>Schedule a Consultation</h3>
+                            <p>Book a 30-minute call to discuss your project requirements</p>
                         </div>
-                        <div class="form-group">
-                            <input type="text" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                    </form>
+                        
+                        <form id="schedule-form-inner" class="form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="schedule-name">Your Name *</label>
+                                    <input type="text" id="schedule-name" name="name" placeholder="John Doe" required>
+                                    <span class="form-icon">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="schedule-email">Your Email *</label>
+                                    <input type="email" id="schedule-email" name="email" placeholder="john@example.com" required>
+                                    <span class="form-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Company/Organization</label>
+                                <input type="text" id="company" name="company" placeholder="Your Company">
+                                <span class="form-icon">
+                                    <i class="fas fa-building"></i>
+                                </span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="call-type">Call Type *</label>
+                                <select id="call-type" name="call-type" required>
+                                    <option value="">Select call type</option>
+                                    <option value="video">Video Call (Zoom/Google Meet)</option>
+                                    <option value="phone">Phone Call</option>
+                                    <option value="in-person">In-person Meeting</option>
+                                </select>
+                                <span class="form-icon">
+                                    <i class="fas fa-video"></i>
+                                </span>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="preferred-date">Preferred Date *</label>
+                                    <input type="date" id="preferred-date" name="date" required>
+                                    <span class="form-icon">
+                                        <i class="fas fa-calendar"></i>
+                                    </span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="preferred-time">Preferred Time *</label>
+                                    <select id="preferred-time" name="time" required>
+                                        <option value="">Select time</option>
+                                        <option value="09:00">9:00 AM</option>
+                                        <option value="10:00">10:00 AM</option>
+                                        <option value="11:00">11:00 AM</option>
+                                        <option value="14:00">2:00 PM</option>
+                                        <option value="15:00">3:00 PM</option>
+                                        <option value="16:00">4:00 PM</option>
+                                        <option value="17:00">5:00 PM</option>
+                                    </select>
+                                    <span class="form-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="project-description">Project Description</label>
+                                <textarea id="project-description" name="project-description" placeholder="Brief description of your project..." rows="4"></textarea>
+                                <span class="form-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </span>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="reminder" name="reminder">
+                                    <span class="checkmark"></span>
+                                    Send me a reminder 24 hours before the call
+                                </label>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-calendar-check"></i> Schedule Call
+                                </button>
+                                <button type="button" class="btn btn-outline" onclick="resetScheduleForm()">
+                                    <i class="fas fa-redo"></i> Reset Form
+                                </button>
+                            </div>
+                            
+                            <div class="form-note">
+                                <p><i class="fas fa-info-circle"></i> I'll confirm the appointment via email within 24 hours</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-cta" data-aos="fade-up" data-aos-delay="500">
+                <div class="cta-content">
+                    <h3>Prefer a direct conversation?</h3>
+                    <p>Schedule a free 30-minute consultation to discuss your project requirements and how I can help bring your vision to life.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary" onclick="scheduleCall()">
+                            <i class="fas fa-calendar"></i> Schedule Call
+                        </a>
+                        <a href="#" class="btn btn-outline" onclick="downloadCV()">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -630,7 +1479,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <h3>RahimStudios</h3>
+                    <h3>IBRAHIM FONYUY</h3>
                     <p>Building digital solutions that matter.</p>
                 </div>
                 
@@ -676,7 +1525,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 RahimStudios. Designed and developed by Ibrahim Fonyuy.</p>
+                <p>&copy; 2025 Designed and developed by IBRAHIM FONYUY.</p>
             </div>
         </div>
     </footer>
